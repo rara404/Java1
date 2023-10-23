@@ -23,15 +23,7 @@ public class JavaOne {
     }
 
     public void ex2() {
-
-        System.out.println("Please enter a String: ");
-        String name = console.nextLine();
-        int count = 0;
-        for (int i = 0; i < name.length(); i++) {
-            if(Character.isUpperCase(name.charAt(i))) count++;
-        }
-
-        System.out.println("Number of Uppercase Letters: " + count);
+        System.out.println("Student 1: ex2.");
     }
 
     public void ex3() {
