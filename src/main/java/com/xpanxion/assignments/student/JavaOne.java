@@ -79,12 +79,16 @@ public class JavaOne {
             System.out.println("Number of vowels: " + vowel);
             System.out.println("Number of consonants: " + (input.length() - vowel));
         } while (input != "quit");
-
-
     }
 
     public void ex6() {
-        System.out.println("Student 1: ex6.");
+        System.out.println("Enter first number: ");
+        int input1 = console.nextInt();
+
+        System.out.println("Enter second number: ");
+        int input2 = console.nextInt();
+
+        System.out.println("Result: " + (input1+input2));
     }
 
     public void ex7() {
