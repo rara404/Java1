@@ -51,7 +51,7 @@ public class JavaOne {
         input = input.toLowerCase();
 
         int n = input.length();
-        for (int i = 0; i < (n/2); ++i) {
+        for (int i = 0; i < (n/2); i++) {
             if (input.charAt(i) != input.charAt(n - i - 1)) {
                 System.out.println("NO");
                 return;
@@ -62,7 +62,25 @@ public class JavaOne {
     }
 
     public void ex5() {
-        System.out.println("Student 1: ex5.");
+
+
+        String input;
+        do {
+            System.out.println("Please enter the string: ");
+            input = console.nextLine();
+            input = input.toLowerCase();
+            if(input.equals("quit")) continue;
+            int vowel = 0;
+
+            for (int i = 0; i < input.length(); i++) {
+                if (input.charAt(i) == 'a' || input.charAt(i) == 'e' || input.charAt(i) == 'i'
+                        || input.charAt(i) == 'o' || input.charAt(i) == 'u') vowel++;
+            }
+            System.out.println("Number of vowels: " + vowel);
+            System.out.println("Number of consonants: " + (input.length() - vowel));
+        } while (input != "quit");
+
+
     }
 
     public void ex6() {
