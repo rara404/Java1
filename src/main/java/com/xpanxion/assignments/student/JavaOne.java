@@ -1,7 +1,9 @@
 package com.xpanxion.assignments.student;
 
-public class JavaOne {
+import java.util.Scanner;
 
+public class JavaOne {
+    Scanner console = new Scanner(System.in);
     //
     // Constructors
     //
@@ -13,7 +15,11 @@ public class JavaOne {
     //
 
     public void ex1() {
-        System.out.println("Student 1: ex1.");
+
+        System.out.println("Please enter your name: ");
+        String name = console.nextLine();
+        name = name.toUpperCase();
+        System.out.println("Your name i upper case is: " + name);
     }
 
     public void ex2() {
