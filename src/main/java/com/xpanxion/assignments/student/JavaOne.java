@@ -33,11 +33,32 @@ public class JavaOne {
     }
 
     public void ex3() {
-        System.out.println("Student 1: ex3.");
+        System.out.println("Please enter the string: ");
+        String input = console.nextLine();
+        String[] tokenInput = input.split(" ");
+        for (int i = 0; i < tokenInput.length; i++) {
+
+            if(i%2 == 0) System.out.print(tokenInput[i].toUpperCase() + " ");
+            else System.out.print(tokenInput[i].toLowerCase() + " ");
+        }
+
     }
 
     public void ex4() {
-        System.out.println("Student 1: ex4.");
+
+        System.out.println("Please enter the string: ");
+        String input = console.nextLine();
+        input = input.toLowerCase();
+
+        int n = input.length();
+        for (int i = 0; i < (n/2); ++i) {
+            if (input.charAt(i) != input.charAt(n - i - 1)) {
+                System.out.println("NO");;
+            }
+        }
+
+        System.out.println("YES");;
+
     }
 
     public void ex5() {
