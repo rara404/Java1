@@ -169,7 +169,24 @@ public class JavaOne {
     }
 
     public void ex10() {
-        System.out.println("Student 1: ex10.");
+        System.out.println("Enter a string: ");
+        String input = console.nextLine();
+        String[] arr = input.split(" ");
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length(); j++) {
+                space(j);
+                System.out.println(arr[i].charAt(j));
+            }
+
+        }
+
+    }
+
+    public static void space(int x){
+        for (int i = 0; i < x; i++) {
+            System.out.print(" ");
+        }
     }
 
     //
