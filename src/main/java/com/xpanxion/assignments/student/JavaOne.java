@@ -92,7 +92,36 @@ public class JavaOne {
     }
 
     public void ex7() {
-        System.out.println("Student 1: ex7.");
+        System.out.println("Enter first number: ");
+        int input1 = console.nextInt();
+
+        System.out.println("Enter second number: ");
+        int input2 = console.nextInt();
+
+        System.out.println("Enter operation (add, sub, mul, div): ");
+        String op = console.next();
+        switch (op){
+            case "add":
+                System.out.println("Result: " + (input1+input2));
+                break;
+
+            case "sub":
+                System.out.println("Result: " + (input1-input2));
+                break;
+
+            case "mul":
+                System.out.println("Result: " + (input1*input2));
+                break;
+
+            case "div":
+                if(input2 != 0)
+                    System.out.println("Result: " + (input1/input2));
+                else
+                    System.out.println("The denominator is zero");
+
+                break;
+        }
+
     }
 
     public void ex8() {
