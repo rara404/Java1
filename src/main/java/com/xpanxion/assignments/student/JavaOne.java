@@ -152,7 +152,20 @@ public class JavaOne {
     }
 
     public void ex9() {
-        System.out.println("Student 1: ex9.");
+        int number = (int)(Math.random()*5) + 1;
+
+        while (true){
+            System.out.println("Enter a number: ");
+            int guess = console.nextInt();
+
+            if(guess == number){
+                System.out.println("You guessed it!!!");
+                break;
+            }else{
+                System.out.println("Try again...");
+            }
+
+        }
     }
 
     public void ex10() {
