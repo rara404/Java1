@@ -140,7 +140,7 @@ public class JavaOne {
 
             if(input.equalsIgnoreCase("done")) break;
 
-            String[] inputArray = input.split("x");
+            String[] inputArray = input.split(" x ");
             width = Integer.parseInt(inputArray[0]);
             height = Integer.parseInt(inputArray[1]);
 
