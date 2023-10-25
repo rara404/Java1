@@ -73,13 +73,56 @@ public class JavaTwo {
 
 
     public void ex4() {
-        var invoice =  new Invoice(1);
-        invoice.addProduct(new Product(111,"Mustard", 2.00));
-        invoice.addProduct(new Product(222,"Ketchup", 3.00));
-        invoice.addProduct(new Product(333,"Franks Hot Sauce", 4.00));
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
-        System.out.println("Total cost: " + formatter.format(invoice.getTotalCost()));
+        ex2();
 
+    }
+
+    public void ex5() {
+        var repository = new Repository();
+        var p = repository.getPerson();
+        System.out.println(p);
+
+    }
+
+    public void ex6() {
+
+        while(true){
+
+            System.out.println("Enter first number: ");
+            String input = console.next();
+
+            if(input.equalsIgnoreCase("done")) break;
+
+            int input1 = Integer.parseInt(input);
+
+            System.out.println("Enter second number: ");
+            int input2 = console.nextInt();
+
+            System.out.println("Enter operation (add, sub, mul, div): ");
+            String op = console.next();
+            switch (op){
+                case "add":
+                    Calculator.add(input1, input2);
+                    break;
+
+                case "sub":
+                    Calculator.sub(input1, input2);
+                    break;
+
+                case "mul":
+                    Calculator.mul(input1, input2);
+                    break;
+
+                case "div":
+                    Calculator.div(input1, input2);
+                    break;
+            }
+
+        }
+
+        for(int i = 0; i < Calculator.history.size(); i++) {
+            System.out.println(Calculator.history.get(i));
+        }
 
     }
 }
