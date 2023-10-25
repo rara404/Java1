@@ -1,5 +1,6 @@
 package com.xpanxion.assignments.student;
 
+import java.text.NumberFormat;
 import java.util.*;
 
 public class JavaTwo {
@@ -45,7 +46,6 @@ public class JavaTwo {
         hashPer.put(person2.getId(), person2);
         hashPer.put(person3.getId(), person3);
 
-
         while(true){
 
             System.out.print("Enter Person ID: ");
@@ -60,10 +60,15 @@ public class JavaTwo {
                 System.out.println("The ID is not associated with any Person");
             }
         }
+    }
 
-
-
-
+    public void ex3() {
+        var invoice =  new Invoice(1);
+        invoice.addProduct(new Product(111,"Mustard", 2.00));
+        invoice.addProduct(new Product(222,"Ketchup", 3.00));
+        invoice.addProduct(new Product(333,"Franks Hot Sauce", 4.00));
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        System.out.println("Total cost: " + formatter.format(invoice.getTotalCost()));
 
     }
 }
