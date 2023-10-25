@@ -2,13 +2,13 @@ package com.xpanxion.assignments.student;
 
 import java.util.ArrayList;
 
-public class Invoice {
-    private int invoiceID;
+public class Invoice extends Base{
     private ArrayList<Product> invoiceList;
 
     public Invoice(int n) {
+        super(n);
         this.invoiceList = new ArrayList<>();
-        this.invoiceID = n;
+
     }
 
     public void addProduct(Product n) {

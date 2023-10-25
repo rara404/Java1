@@ -1,22 +1,17 @@
 package com.xpanxion.assignments.student;
 
-public class Product {
-    private int productID;
+public class Product extends Base {
     private String productName;
     private double cost;
 
     public Product(int productID, String productName, double cost) {
-        this.productID = productID;
+        super(productID);
         this.productName = productName;
         this.cost = cost;
     }
 
     public int getProductID() {
-        return productID;
-    }
-
-    public void setProductID(int productID) {
-        this.productID = productID;
+        return super.getID();
     }
 
     public String getProductName() {
@@ -38,7 +33,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "productID=" + productID +
+                "productID=" + super.getID() +
                 ", productName='" + productName + '\'' +
                 ", cost=" + cost +
                 '}';
