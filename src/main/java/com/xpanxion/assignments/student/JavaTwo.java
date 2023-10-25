@@ -125,4 +125,34 @@ public class JavaTwo {
         }
 
     }
+
+    public void ex7() {
+        var personList = Arrays.asList(
+                new Person("Peter", "Jones", 1),
+                new Person( "John", "Smith", 2),
+                new Person( "Sue", "Anderson", 3)
+        );
+
+
+
+        personList.stream().map(person -> new Person(person.getFirstName(), "xxx", person.getId())).forEach(System.out::println);
+    }
+
+
+    public void ex8() {
+        var personList = Arrays.asList(
+                new Person("Charlie", "Jones", 1),
+                new Person( "Zoey", "Smith", 2),
+                new Person( "Adam", "Anderson", 3)
+        );
+
+        Collections.sort(personList);
+
+        for (Person p : personList) {
+            System.out.println(p);
+        }
+
+
+
+    }
 }
