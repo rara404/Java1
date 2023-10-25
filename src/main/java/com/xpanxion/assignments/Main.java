@@ -18,8 +18,8 @@ public class Main {
 //        javaOne.ex9();
 //        javaOne.ex10();
 
-        javaTwo.ex1();
-
+//        javaTwo.ex1();
+        javaTwo.ex2();
 
     }
 }

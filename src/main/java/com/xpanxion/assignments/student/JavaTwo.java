@@ -1,8 +1,6 @@
 package com.xpanxion.assignments.student;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class JavaTwo {
 
@@ -36,6 +34,36 @@ public class JavaTwo {
     }
 
     public void ex2() {
+
+        Map<Integer, Person> hashPer = new HashMap<>();
+
+        Person person1 = new Person("Peter", "Jones", 1);
+        Person person2 = new Person("John", "Smith", 2);
+        Person person3 = new Person("Mary", "Jane", 3);
+
+        hashPer.put(person1.getId(), person1);
+        hashPer.put(person2.getId(), person2);
+        hashPer.put(person3.getId(), person3);
+
+
+        while(true){
+
+            System.out.print("Enter Person ID: ");
+            String input = console.next();
+
+            if(input.equalsIgnoreCase("done")) break;
+            int id = Integer.parseInt(input);
+
+            if(hashPer.containsKey(id)){
+                System.out.println(hashPer.get(id));
+            } else{
+                System.out.println("The ID is not associated with any Person");
+            }
+        }
+
+
+
+
 
     }
 }
