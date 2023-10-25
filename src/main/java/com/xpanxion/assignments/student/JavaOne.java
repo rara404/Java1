@@ -58,7 +58,7 @@ public class JavaOne {
             }
         }
 
-        System.out.println("YES");;
+        System.out.println("YES");
     }
 
     public void ex5() {

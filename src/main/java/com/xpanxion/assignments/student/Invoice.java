@@ -3,7 +3,7 @@ package com.xpanxion.assignments.student;
 import java.util.ArrayList;
 
 public class Invoice extends Base{
-    private ArrayList<Product> invoiceList;
+    private final ArrayList<Product> invoiceList;
 
     public Invoice(int n) {
         super(n);

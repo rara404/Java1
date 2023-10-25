@@ -1,7 +1,7 @@
 package com.xpanxion.assignments.student;
 
 abstract class Base {
-    private int ID;
+    private final int ID;
 
     public Base(int ID) {
         this.ID = ID;
